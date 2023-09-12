@@ -48,3 +48,13 @@ test2:
     paths:
       - build
       - .gradle
+test3:
+  stage: test3
+  script: gradle check
+  cache:
+    key: "$CI_COMMIT_REF_NAME"
+    policy: pull
+    paths:
+      - build
+      - .gradle
+
